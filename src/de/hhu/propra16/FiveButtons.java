@@ -21,6 +21,19 @@ public class FiveButtons extends Application {
 
         primaryStage.setTitle("Five Buttons");
         primaryStage.setScene(new Scene(root, 800, 600));
+        Button carlobutton = new Button("Schließen")
+        carlobutton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                handleAction();
+            }
+        });
+        primaryStage.setScene(new Scene(carlobutton));
         primaryStage.show();
+
     }
+public void handleAction(){
+    System.exit(0);
+}
+
 }
